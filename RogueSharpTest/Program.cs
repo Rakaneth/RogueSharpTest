@@ -14,7 +14,7 @@ namespace RogueSharpTest
         static void Main(string[] args)
         {
             // Setup the engine and creat the main window.
-            SadConsole.Game.Create("IBM.font", Width, Height);
+            SadConsole.Game.Create("C64.font", Width, Height);
 
             // Hook the start event so we can add consoles to the system.
             SadConsole.Game.OnInitialize = Init;
@@ -48,9 +48,7 @@ namespace RogueSharpTest
             // Any custom loading and prep. We will use a sample console for now
 
             Console startingConsole = new Console(Width, Height);
-            startingConsole.FillWithRandomGarbage();
-            startingConsole.Fill(new Rectangle(3, 3, 27, 5), null, Color.Black, 0);
-            startingConsole.Print(6, 5, "Hello from SadConsole", ColorAnsi.CyanBright);
+            startingConsole.Print(40, 12, "Hello SadConsole");
 
             // Set our new console as the thing to render and process
             SadConsole.Global.CurrentScreen = startingConsole;
